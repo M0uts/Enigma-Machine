@@ -39,18 +39,7 @@ namespace Text_Incripter1._1
                 int numRan;
                 numRan = random.Next(1, 4);
 
-                switch (numRan)
-                {
-                    case 1:
-                        processedFile = Incript.Incript1(text);
-                        break;
-                    case 2:
-                        processedFile = Incript.Incript2(text);
-                        break;
-                    case 3:
-                        processedFile = Incript.Incript3(text);
-                        break;
-                }
+                processedFile = Incript.Incript(text, numRan);
                 
                 string newFileName;
                 newFileName = Path.GetDirectoryName(filepath) + @"\incriptedText.txt";
